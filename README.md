@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Schedule Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A schedule planning application built to explore and demonstrate the capabilities of IndexedDB in modern web applications.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a practical implementation of a schedule management system that allows users to create and manage multiple schedules for employees. It serves as both a useful tool and a learning platform for working with client-side storage using IndexedDB.
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Implemented ✓
 
-- Configure the top-level `parserOptions` property like this:
+- [x] Multiple schedule management for the same month
+- [x] Drag-and-drop interface for easy schedule modifications
+- [x] Persistent data storage using IndexedDB
+- [x] Print-friendly schedule views
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Roadmap 🚀
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- [ ] Customizable employee color coding
+- [ ] Schedule templates
+- [ ] Export/Import functionality
+- [ ] Schedule conflict detection
+- [ ] Employee availability tracking
+- [ ] Schedule statistics and analytics
+- [ ] Multi-language support
+- [ ] Dark mode support
+- [ ] Responsive design for various screen sizes
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Technical Stack
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- React
+- TypeScript
+- IndexedDB (via idb library)
+- Tailwind CSS
+- React DnD (Drag and Drop)
+
+## Why IndexedDB?
+
+This project specifically utilizes IndexedDB to:
+
+- Store large amounts of structured data on the client side
+- Provide offline functionality
+- Handle complex data relationships
+- Demonstrate real-world usage of browser-based databases
