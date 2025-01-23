@@ -60,15 +60,15 @@ const groupDaysByWeek = (days: Day[]): WeekRow[] => {
 
 interface PrintTemplateProps {
   days: Day[];
+  monthName: string;
+  year: number;
 }
 
 export const PlannerSchedulePrintTemplate = forwardRef<
   HTMLDivElement,
   PrintTemplateProps
->(({ days }, ref) => {
+>(({ days, monthName, year }, ref) => {
   const weeks = groupDaysByWeek(days);
-  const month = days[0]?.date.toLocaleString('default', { month: 'long' });
-  const year = days[0]?.date.getFullYear();
 
   const scheduleId = calendarStore((state) => state.scheduleId);
 
@@ -84,7 +84,7 @@ export const PlannerSchedulePrintTemplate = forwardRef<
       className="w-full h-full p-8 print:p-2 print:landscape bg-white text-black hidden print:block"
     >
       <h1 className="text-2xl font-bold mb-4 text-center print:text-black">
-        {month} {year} - {scheduleName}
+        {monthName} {year} - {scheduleName}
       </h1>
 
       <table className="w-full border-collapse">

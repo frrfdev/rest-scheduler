@@ -97,6 +97,8 @@ export const PlannerCalendarHeader = ({
       <PlannerSchedulePrintTemplate
         ref={componentRef}
         days={currentMonthDays}
+        monthName={currentMonthName}
+        year={currentYear}
       />
     </div>
   );
