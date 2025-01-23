@@ -208,7 +208,7 @@ export const PlannerCalendar = () => {
     <Loader
       isVisible={getMonthDaysQuery.isLoading || getScheduleQuery.isLoading}
     >
-      <div className="bg-neutral-800 relative w-full h-full flex flex-col [background-image:radial-gradient(#4040409F_1px,transparent_1px)] [background-size:40px_40px]">
+      <div className="bg-neutral-800 relative w-full max-h-full h-full flex flex-col [background-image:radial-gradient(#4040409F_1px,transparent_1px)] [background-size:40px_40px]">
         <PlannerCalendarHeader
           currentMonth={currentMonth}
           currentYear={currentYear}
@@ -222,7 +222,7 @@ export const PlannerCalendar = () => {
             </span>
           ))}
         </div>
-        <div className="grid grid-cols-7 gap-2 auto-rows-fr w-full h-full p-8 pt-0">
+        <div className="grid grid-cols-7 gap-2 auto-rows-fr w-full h-full p-8 pt-0 overflow-y-hidden">
           {currentMonthDays.map((day) => (
             <PlannerDay {...day} updateDay={handleUpdateDay} />
           ))}
