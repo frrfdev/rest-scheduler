@@ -143,7 +143,11 @@ export const EmployeesForm = ({ children, employee }: EmployeesFormProps) => {
               <Button type="button" onClick={() => setIsOpen(false)}>
                 Cancel
               </Button>
-              <Button type="submit" variant="success">
+              <Button
+                type="submit"
+                variant="success"
+                id="create-employee-submit"
+              >
                 {employee ? 'Update Employee' : 'Create Employee'}
               </Button>
             </div>

@@ -154,3 +154,7 @@ button:focus-visible {
     padding: 0;
   }
 }
+
+.dialog-content {
+  scroll-behavior: smooth;
+}

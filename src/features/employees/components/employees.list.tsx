@@ -21,7 +21,7 @@ export const EmployeesList = () => {
     <Loader isVisible={getEmployeesQuery.isLoading}>
       <div className="min-w-[300px]">
         <EmployeesForm>
-          <Button variant={'success'} className="w-full">
+          <Button variant={'success'} className="w-full" id="new-employee">
             Create Employee
           </Button>
         </EmployeesForm>
